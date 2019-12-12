@@ -1,5 +1,3 @@
-
-
 import sys # import class sys
 import re # import class reg exp
 from collections import Counter # import counter
