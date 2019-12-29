@@ -11,20 +11,20 @@ YES = 'Y'
 BYE = 'Bye, see you next time! :)'
 WELCOME ='Welcome to a Guessing Word Game!'
 THINK_A_WORD = "Think of a word and enter it's length: "
-PUT_LETTER_POSISSION ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
+POSITIONS_OF_AVAILABLE_LETTERS ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
 EMPTY_STRING = ''
 COMMA = ','
 DOT = '.'
-GUESSED_WORD = 'I want to tell the whole word: "{}"'
-CANT_GUESS = "You are the champion! Can't guess the word matching specified letters"
-NO_TRIES_LEFT = "No more word left, so you're probably cheating, stop do it :)!"
+GUESSED_WORD = 'I want to tell wholw word: "{}"'
+CANT_GUESS = "You are che champion! Can't guess the word matching specified letters"
+NO_TRIES_LEFT = "No more word, so you're probably cheating, stop do it!"
 PATH_TO_DATABASE = 'C:\Python\words.txt'
 
 def searchWords(textFile):
     text = re.findall (r'\w+', textFile.read().lower())
-    return text   
+    return text
 
-def splitWord(word): 
+def splitWord(word):
     return [char for char in word]
 
 def sumFreq(d):
@@ -32,9 +32,9 @@ def sumFreq(d):
     for key in d:
         sum_freq += d[key]
     return sum_freq
-        
-def searchUniqueWords(inputList,givenWordLength):       
-    listSet = set(inputList) 
+
+def searchUniqueWords(inputList,givenWordLength):
+    listSet = set(inputList)
     unique_words_list = sorted(list(listSet))
     possibleWordsMatchedReg = [el.lower() for el in unique_words_list if len(el) == givenWordLength]
     if possibleWordsMatchedReg==[]:
@@ -51,14 +51,14 @@ def getCharFrequency(wordSubset):
     for char in wordsString:
         try:
             result[char] +=1  # If char already in result dictionary, increase its count
-            sumFreqChars +=1                    
+            sumFreqChars +=1
         except KeyError:
             result[char] = 1  # If char not in result dict yet, start counting it
-            sumFreqChars +=1                   
+            sumFreqChars +=1
     for char in result:
         freq[char]=round(result[char]*100/sumFreqChars,2)
 
-    result = sorted(freq.items(), key=operator.itemgetter(1), reverse=True) 
+    result = sorted(freq.items(), key=operator.itemgetter(1), reverse=True)
     return result
 
 def newGame():
@@ -67,10 +67,10 @@ def newGame():
         startGame()
     else:
         print(BYE)
-        sys.exit() 
+        sys.exit()
 
 def startGame():
-    if len(sys.argv) < 2:        
+    if len(sys.argv) < 2:
         with open(PATH_TO_DATABASE) as f:
             print(WELCOME)
             given_word_length = int(input(THINK_A_WORD))
@@ -109,8 +109,8 @@ def startGame():
                             sys.exit()
                         continue  # if nothing entered, than no char the word includes, so repeat with next most popular char
     else:
-        with open(sys.argv[1], 'r') as f:            
+        with open(sys.argv[1], 'r') as f:
             searchWords(f)                
- 
+
 if __name__ == '__main__':
     startGame()
