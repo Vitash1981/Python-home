@@ -11,7 +11,7 @@ YES = 'Y'
 BYE = 'Bye, see you next time! :)'
 WELCOME ='Welcome to a Guessing Word Game!'
 THINK_A_WORD = "Think of a word and enter it's length: "
-POSITIONS_OF_AVAILABLE_LETTERS ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
+POSITIONS_OF_AVAILABLE_LETTERS ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0 like 0,2, \n or just press Enter if the letter is absent: '
 EMPTY_STRING = ''
 COMMA = ','
 DOT = '.'
@@ -64,12 +64,12 @@ def getCharFrequency(wordSubset):
 def newGame():
     answer = input(ONE_MORE_TRY).upper()
     if answer.startswith(YES):
-        startGame()
+        start_game()
     else:
         print(BYE)
         sys.exit()
 
-def startGame():
+def start_game():
     if len(sys.argv) < 2:
         with open(PATH_TO_DATABASE) as f:
             print(WELCOME)
@@ -113,4 +113,4 @@ def startGame():
             searchWords(f)                
 
 if __name__ == '__main__':
-    startGame()
+    start_game()
