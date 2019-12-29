@@ -6,18 +6,18 @@ import re
 import operator
 
 NO_GUESSES = "I don't know any word of a given length..."
-ONE_MORE_TRY = 'Would you like to play one more time? (y/n): '
+ONE_MORE_TRY = 'Would you like to play one more times? (y/n): '
 YES = 'Y'
 BYE = 'Bye, see you next time! :)'
 WELCOME ='Welcome to a Guessing Word Game!'
 THINK_A_WORD = "Think of a word and enter it's length: "
-POSITIONS_OF_AVAILABLE_LETTERS ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
+PUT_LETTER_POSISSION ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
 EMPTY_STRING = ''
 COMMA = ','
 DOT = '.'
-GUESSED_WORD = 'I guess the hidden word is: "{}"'
-CANT_GUESS = "You won! Can't guess the word matching specified letters"
-NO_TRIES_LEFT = "No more tries left, so you're probably cheating!"
+GUESSED_WORD = 'I want to tell the whole word: "{}"'
+CANT_GUESS = "You are the champion! Can't guess the word matching specified letters"
+NO_TRIES_LEFT = "No more word left, so you're probably cheating, stop do it :)!"
 PATH_TO_DATABASE = 'C:\Python\words.txt'
 
 def searchWords(textFile):
