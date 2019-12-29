@@ -6,10 +6,10 @@ import re
 import operator
 
 NO_GUESSES = "I don't know any word of a given length..."
-ONE_MORE_TRY = 'Would you like to play again? (y/n): '
+ONE_MORE_TRY = 'Would you like to play one more time? (y/n): '
 YES = 'Y'
-BYE = 'Bye, see you later! :)'
-WELCOME ='Hi! it the best game Guessing word!'
+BYE = 'Bye, see you next time! :)'
+WELCOME ='Welcome to a Guessing Word Game!'
 THINK_A_WORD = "Think of a word and enter it's length: "
 POSITIONS_OF_AVAILABLE_LETTERS ='\n If letter(s): "{}" is available in the hidden word, \n please enter comma separated position(s) counting from 0, \n or just press Enter if the letter is absent: '
 EMPTY_STRING = ''
