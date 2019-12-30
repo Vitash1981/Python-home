@@ -16,8 +16,8 @@ EMPTY_STRING = ''
 COMMA = ','
 DOT = '.'
 GUESSED_WORD = 'I want to tell wholw word: "{}"'
-CANT_GUESS = "You are che champion! Can't guess the word matching specified letters"
-NO_TRIES_LEFT = "No more word, so you're probably cheating, stop do it!"
+CANT_GUESS = "You are che champions! Can't guess the word matching specified letters"
+NO_TRIES_LEFT = "No more word, so you're probably cheating, stop doing it!"
 PATH_TO_DATABASE = 'C:\Python\words.txt'
 
 def searchWords(textFile):
