@@ -1,5 +1,5 @@
 id:NUMERIC,priority:INT,details:TEXT,status:TEXT,deadline:DATE,completed:DATE,Project:TEXT
-111,5,Feed a dog,ongoing,02.02.2020,,Cat
+111,5,Feed a dog,ongoing,02.02.2020,,Dog
 22,100,Do HW asap!,pending,10.02.2020,,Python hw8
 12,50,Cook fry potato,done,,11.02.2020,Family
 10,70,Check daughter's hw,ongoing,,05.02.2020,Family
